@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.034" y1="-0.204" x2="0.935" y2="1.16" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#54f293"/>
+      <stop offset="0.517" stop-color="#f1ff83"/>
+      <stop offset="1" stop-color="#1374e8"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_541" data-name="Grupo 541" transform="translate(-767.5 -8453.999)">
+    <circle id="Elipse_46" data-name="Elipse 46" cx="25" cy="25" r="25" transform="translate(767.5 8453.999)" fill="#080316"/>
+    <path id="FB" d="M1897.149,2346.094h-25a2.476,2.476,0,0,0-2.5,2.5v25a2.476,2.476,0,0,0,2.5,2.5h12.5v-1h0v-10h-4v-4h4v-3.5a5.536,5.536,0,0,1,5-5.5h4.5v4h-4a1.473,1.473,0,0,0-1.5,1.5v3.5h5v4h-5v11h8.5a2.476,2.476,0,0,0,2.5-2.5v-25A2.476,2.476,0,0,0,1897.149,2346.094Zm1.5,27.5h0a1.473,1.473,0,0,1-1.5,1.5h-7.5v-9h5v-6h-5v-2.5a.472.472,0,0,1,.5-.5h5v-6h-5.55a6.563,6.563,0,0,0-5.95,6.5v2.5h-4v6h4v9h-11.5a1.473,1.473,0,0,1-1.5-1.5v-25a1.473,1.473,0,0,1,1.5-1.5h25a1.473,1.473,0,0,1,1.5,1.5Z" transform="translate(-1089.947 6119.891)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
