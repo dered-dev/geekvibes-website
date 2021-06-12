@@ -535,7 +535,7 @@ html {
 .services__head .left_services__head strong {
     text-transform: uppercase;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 0.25em;
     line-height: 1.35em;
 }
 
@@ -782,6 +782,7 @@ html {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 400;
+    letter-spacing: 0.5em;
 }
 
 .all__projects--title {
@@ -983,6 +984,7 @@ html {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 400;
+    letter-spacing: 0.25em;
 }
 
 .ctn__clients__title {
@@ -1368,6 +1370,7 @@ html {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 400;
+    letter-spacing: 0.25em;
 }
 
 .form__contact__title {
@@ -1607,6 +1610,7 @@ html {
     color: #8AB4F8;
     text-transform: uppercase;
     font-weight: 400;
+    letter-spacing: 0.25em;
 }
 .footer .footer__geek{
     font-size: 1.5rem;
@@ -1821,6 +1825,7 @@ html {
 
     .head__section .coltext__head__section strong {
         font-size: 1rem;
+        letter-spacing: 0.25em;
     }
 
     .head__section .coltext__head__section p {
