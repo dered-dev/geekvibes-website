@@ -1204,6 +1204,8 @@ html {
     border-bottom: 1px solid #fff;
     background-color: transparent;
     color: #54F293;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .group__input input:focus {
