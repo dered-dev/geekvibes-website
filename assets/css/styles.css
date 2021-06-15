@@ -608,9 +608,33 @@ html {
     left: 3rem;
 }
 
+.services__grid .splide__arrows .splide__arrow--prev:hover ,
+.services__grid .splide__arrows .splide__arrow--prev:active ,
+.services__grid .splide__arrows .splide__arrow--prev:focus {
+    background-image: url('../img/icons/arrow__left__blue.svg');
+    left: 3rem;
+}
+.services__grid .splide__arrows .splide__arrow--prev[disabled]{
+    opacity: 0.3;
+    pointer-events: none;
+    background-image: url('../img/icons/arrow__left__gray.svg');
+}
+
 .services__grid .splide__arrows .splide__arrow--next {
     background-image: url('../img/icons/arrow__right__gray.svg');
     right: 3rem;
+}
+.services__grid .splide__arrows .splide__arrow--next:hover ,
+.services__grid .splide__arrows .splide__arrow--next:active ,
+.services__grid .splide__arrows .splide__arrow--next:focus {
+    background-image: url('../img/icons/arrow__right__blue.svg');
+    right: 3rem;
+}
+
+.services__grid .splide__arrows .splide__arrow--next[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+    background-image: url('../img/icons/arrow__right__gray.svg');
 }
 
 .slide__services__indicator {
@@ -1081,6 +1105,8 @@ html {
     color: #54F293;
     min-width: 222px;
     width: 100%;
+    box-shadow: none;
+    border-radius: 0;
 }
 
 
@@ -1558,7 +1584,7 @@ html {
 }
 
 .container__check input:checked~.checkmark {
-    background-color: #2196F3;
+    background-color: #54F293;
 }
 
 .container__check .checkmark:after {
