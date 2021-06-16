@@ -94,30 +94,35 @@ const requestContact = (objContact) => {
           return 
       } else {
           if(request.status >= 200 && request.status <= 299){
-              const response  = request
-              console.log(response)
               if(request.response === 'OK') {
                 document.querySelector('.modal__contact__send').classList.add('open')
+                // clear form
+                nombre.value = ''
+                apellido.value = ''
+                mail.value = ''
+                telefono.value = ''
+                servicio.value = ''
+                mensaje.value = ''
+                checkbox__input.checked = false
               }
           } else {
               console.log('No se pudo ejecutar')
           }
       } 
   })
-
   request.send(objContact)
 }
 let formContact = document.getElementById('form__contactform')
+let nombre = document.getElementById('nombre')
+let apellido = document.getElementById('apellido')
+let mail = document.getElementById('mail')
+let telefono = document.getElementById('telefono')
+let servicio = document.getElementById('servicio')
+let mensaje = document.getElementById('mensaje')
+let checkbox__input = document.getElementById('checkbox__input')
 formContact.addEventListener('submit', function(event){
 
   event.preventDefault()
-  let nombre = document.getElementById('nombre')
-  let apellido = document.getElementById('apellido')
-  let mail = document.getElementById('mail')
-  let telefono = document.getElementById('telefono')
-  let servicio = document.getElementById('servicio')
-  let mensaje = document.getElementById('mensaje')
-  let checkbox__input = document.getElementById('checkbox__input')
   
   let valid = true
   if( nombre.value === "" ){

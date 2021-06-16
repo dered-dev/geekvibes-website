@@ -1230,7 +1230,7 @@ html {
 
 .group__input input {
     font-size: 18px;
-    padding: 10px 10px 10px 5px;
+    padding: 10px 1.5rem 10px 5px;
     display: block;
     width: 100%;
     border: none;
@@ -1239,6 +1239,17 @@ html {
     color: #54F293;
     border-radius: 0;
     box-shadow: none;
+}
+/* Change the white to any color */
+.group__input input:-webkit-autofill,
+.group__input input:-webkit-autofill:hover, 
+.group__input input:-webkit-autofill:focus, 
+.group__input input:-webkit-autofill:active,
+.group__input input:internal-autofill-selected
+{
+ box-shadow: none;
+ background-color: transparent !important;
+ filter: grayscale(100%) brightness(110%);
 }
 
 .group__input input:focus {
@@ -1271,6 +1282,25 @@ html {
 
 .group__input input:valid {
     border-color: #54F293;
+}
+
+.group__input .check__input{
+    position: absolute;
+    right: 9px;
+    top: 5px;
+    width: 8px;
+    height: 16px;
+    border: solid #4AF48F;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear 0.25s;
+}
+.group__input input:valid ~ .check__input{
+    opacity: 1;
+    visibility: visible;
 }
 
 
