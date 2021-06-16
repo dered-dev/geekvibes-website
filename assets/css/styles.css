@@ -330,6 +330,7 @@ html {
     display: inline-block;
     -webkit-transition: all ease-in 0.25s;
     transition: all ease-in 0.25s;
+    vertical-align: middle;
 }
 
 
@@ -491,6 +492,7 @@ html {
     font-size: 0.875rem;
     color: #8AB4F8;
     letter-spacing: 0.25em;
+    font-weight: 400;
 }
 
 .head__section .coltext__head__section h1 {
@@ -502,6 +504,7 @@ html {
 .head__section .coltext__head__section p {
     font-size: 1rem;
     color: #9AA0A6;
+    line-height: 1.35em;
 }
 
 .head__section .colimg__head__section img {
@@ -544,6 +547,7 @@ html {
     line-height: 1.35em;
     margin-top: 1rem;
     margin-bottom: 0;
+    font-weight: 400;
 }
 
 
@@ -704,6 +708,7 @@ html {
     font-size: 1rem;
     margin-top: 0;
     margin-bottom: 0;
+    line-height: 1.4em;
 }
 
 
@@ -806,7 +811,7 @@ html {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 400;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.25em;
 }
 
 .all__projects--title {
@@ -883,6 +888,7 @@ html {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     z-index: 3;
+    text-transform: uppercase;
 }
 
 .grid__projects .block__name__project {
@@ -1013,6 +1019,7 @@ html {
 
 .ctn__clients__title {
     font-size: 2.875rem;
+    font-weight: 400;
 }
 
 .grid__clients {
@@ -1584,7 +1591,7 @@ html {
 }
 
 .container__check input:checked~.checkmark {
-    background-color: #54F293;
+    background-color: #8AB4F8;
 }
 
 .container__check .checkmark:after {
@@ -1738,6 +1745,65 @@ html {
 }
 .footer .copyright a{
     color: #fff;
+}
+
+.modal__contact__send{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(249,249,249,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    opacity: 0;
+    z-index: -100;
+    visibility: hidden;
+    transition: opacity linear 0.5s, visibility linear 0.1s;
+}
+.modal__contact__send.open{
+    opacity: 1;
+    z-index: 10;
+    visibility: visible;
+}
+.modal__contact__send .inner__contact__send{
+    background-color: #fff;
+    box-shadow: 3px 6px 19px #e4e9f2;
+    border-radius: 1rem;
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 320px;
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    transition: all linear 0.25s;
+    top: 100px;
+}
+.modal__contact__send.open .inner__contact__send{
+    top: 0;
+    transition: all linear 0.25s;
+}
+
+.close__contact__send{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.modal__contact__send .text__contact__send{
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {

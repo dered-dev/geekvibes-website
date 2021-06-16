@@ -15,12 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
         perPage: 1,
       },
     }
-  }).mount();
+  }).mount()
 
   slideServices.on('move', function (current) {
     let currentSlide = '0' + (current + 1)
     document.querySelector('.current__indicator').innerText = currentSlide
-  });
+  })
+
 });
 
 var scroll = window.requestAnimationFrame ||
@@ -84,22 +85,92 @@ function clickHandler(e) {
 
 
 // send form
+const requestContact = (objContact) => {
 
-const request = new XMLHttpRequest()
-request.open('POST','https://python2g-default-rtdb.firebaseio.com/koders/.json')
-request.addEventListener('readystatechange', () => {
-    if(request.readyState !== 4) {
-        return 
-    } else {
-        if(request.status >= 200 && request.status <= 299){
-            const response  = request
-            const objectResponse = JSON.parse(response.responseText)
-            console.log(objectResponse)
-        } else {
-            console.log('No se pudo ejecutar')
-        }
-    } 
+  const request = new XMLHttpRequest()
+  request.open('POST','https://api.emailjs.com/api/v1.0/email/send-form')
+  request.addEventListener('readystatechange', () => {
+      if(request.readyState !== 4) {
+          return 
+      } else {
+          if(request.status >= 200 && request.status <= 299){
+              const response  = request
+              console.log(response)
+              if(request.response === 'OK') {
+                document.querySelector('.modal__contact__send').classList.add('open')
+              }
+          } else {
+              console.log('No se pudo ejecutar')
+          }
+      } 
+  })
+
+  request.send(objContact)
+}
+let formContact = document.getElementById('form__contactform')
+formContact.addEventListener('submit', function(event){
+
+  event.preventDefault()
+  let nombre = document.getElementById('nombre')
+  let apellido = document.getElementById('apellido')
+  let mail = document.getElementById('mail')
+  let telefono = document.getElementById('telefono')
+  let servicio = document.getElementById('servicio')
+  let mensaje = document.getElementById('mensaje')
+  let checkbox__input = document.getElementById('checkbox__input')
+  
+  let valid = true
+  if( nombre.value === "" ){
+    nombre.classList.add('is-invalid')
+    valid = false
+  }
+  if( apellido.value === "" ){
+    apellido.classList.add('is-invalid')
+    valid = false
+  }
+  if( mail.value === "" ){
+    mail.classList.add('is-invalid')
+    valid = false
+  }
+  if( telefono.value === "" ){
+    telefono.classList.add('is-invalid')
+    valid = false
+  }
+  if( servicio.value === "" ){
+    servicio.classList.add('is-invalid')
+    valid = false
+  }
+  if( checkbox__input.checked === false ){
+    checkbox__input.classList.add('is-invalid')
+    valid = false
+  }
+  if(valid) {
+    let recaptcha = document.getElementById('g-recaptcha-response')
+    let formData = new FormData();
+    formData.append('service_id', 'service_zsam2t7');
+    formData.append('template_id', 'template_wt9rier');
+    formData.append('user_id', 'user_UQTlOPCNaIiD612Vp0POz');
+    formData.append('from_name', nombre.value + ' ' + apellido.value);
+    formData.append('email__user', mail.value);
+    formData.append('phone__user', telefono.value);
+    formData.append('service__user', servicio.value);
+    formData.append('message', mensaje.value);
+    formData.append('g-recaptcha-response', recaptcha.value);
+    
+    requestContact(formData)
+
+  }
+
 })
-request.send(
-    JSON.stringify(objNewKoder)
-)
+
+// close modal sending
+let close__contact__send = document.querySelector('.close__contact__send')
+if(close__contact__send){
+  close__contact__send.addEventListener('click',function(){
+    document.querySelector('.modal__contact__send').classList.remove('open')
+  })
+}
+
+
+
+

@@ -171,7 +171,7 @@
         <div class="inner__large">
             <div class="grid__projects">
                 <div class="inline-element show-on-scroll  projects__grid__card">
-                    <span class="projects__grid__category">Label</span>
+                    <span class="projects__grid__category">E-commerce</span>
                     <img src="assets/img/imgs_projects/CE-website@2x.jpg" alt="City express website">
                     <div class="block__name__project">
                         <strong>Hoteles City Express</strong>
@@ -184,7 +184,7 @@
                     </div>
                 </div>
                 <div class="inline-element show-on-scroll  projects__grid__card">
-                    <span class="projects__grid__category">Label</span>
+                    <span class="projects__grid__category">E-commerce</span>
                     <img src="assets/img/imgs_projects/peugeot@2x.jpg" alt="Peugeot">
                     <div class="block__name__project">
                         <strong>Peugeot e-store</strong>
@@ -197,7 +197,7 @@
                     </div>
                 </div>
                 <div class="inline-element show-on-scroll  projects__grid__card">
-                    <span class="projects__grid__category">Label</span>
+                    <span class="projects__grid__category">Sitio Web</span>
                     <img src="assets/img/imgs_projects/valores-futel@2x.jpg" alt="Valores fundación televisa">
                     <div class="block__name__project">
                         <strong>Fundación Televisa Valores</strong>
@@ -210,7 +210,7 @@
                     </div>
                 </div>
                 <div class="inline-element show-on-scroll  projects__grid__card">
-                    <span class="projects__grid__category">Label</span>
+                    <span class="projects__grid__category">Apps</span>
                     <img src="assets/img/imgs_projects/teleton@2x.jpg" alt="Teleton">
                     <div class="block__name__project">
                         <strong>TELETÓN</strong>
@@ -233,7 +233,7 @@
     <section class="ctn__clients">
         <div class="inner__small">
             <strong class="ctn__clients__slogan pink__color">CLIENTES</strong>
-            <h3 class="ctn__clients__title">Marcas que <span class="sub__green"> <i>confían</i></span> en nosotros</h3>
+            <h3 class="ctn__clients__title">Algunas de las marcas que <span class="sub__green"> <i>confían</i></span> en nosotros</h3>
             <ul class="grid__clients">
                 <li class="inline-element show-on-scroll">
                     <a href="#">
@@ -267,106 +267,124 @@
 
     <section class="form__contact">
         <div class="inner__small">
-            
-            <div class="form__contact__form">
-                <div class="contact__form__left">
-                    <strong class="pink__color form__contact__slogan"> Hagamos realidad tu proyecto</strong>
-                    <h3 class="form__contact__title">¿Cómo te ayudamos? </h3>
-                    <p class="form__contact__description">¡Estamos listos para trabajar juntos!</p>
+            <form method="POST" action="" id="form__contactform">
+                <div class="form__contact__form">
+                    <div class="contact__form__left">
+                        <strong class="pink__color form__contact__slogan"> Hagamos realidad tu proyecto</strong>
+                        <h3 class="form__contact__title">¿Cómo te ayudamos? </h3>
+                        <p class="form__contact__description">¡Estamos listos para trabajar juntos!</p>
+                        <div class="form__contact__inputs">
+                            <div class="group__input medium">      
+                                <input type="text" required name="nombre" id="nombre">
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Nombre</label>
+                            </div>
+        
+                            <div class="group__input medium">      
+                                <input type="text" required name="apellido" id="apellido">
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Apellido</label>
+                            </div>
+        
+                            <div class="group__input medium">      
+                                <input type="text" required name="mail" id="mail">
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>E-mail</label>
+                            </div>
+        
+                            <div class="group__input medium">      
+                                <input type="text" required name="telefono" id="telefono">
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Teléfono</label>
+                            </div>
+        
+                            <div class="select__wrap medium">
+                                <select class="select-text" required name="servicio" id="servicio">
+                                    <option value="" disabled selected></option>
+                                    <option value="Desarollo Web">Desarollo Web</option>
+                                    <option value="Marketing Digital">Marketing Digital</option>
+                                    <option value="Desarrollo de Apps">Desarrollo de aplicaciones</option>
+                                </select>
+                                <span class="select-highlight"></span>
+                                <span class="select-bar"></span>
+                                <label class="select-label">Selecciona un servicio</label>
+                            </div>
+                        </div>
+                        <!-- <p class="question__budget">¿Tienes un presupuesto?</p> -->
 
-                    <div class="form__contact__inputs">
-                        <div class="group__input medium">      
-                            <input type="text" required>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Nombre</label>
-                        </div>
-    
-                        <div class="group__input medium">      
-                            <input type="text" required>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Apellido</label>
-                        </div>
-    
-                        <div class="group__input medium">      
-                            <input type="text" required>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>E-mail</label>
-                        </div>
-    
-                        <div class="group__input medium">      
-                            <input type="text" required>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Teléfono</label>
-                        </div>
-    
-                        <div class="select__wrap medium">
-                            <select class="select-text" required name="servicio">
-                                <option value="" disabled selected></option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
-                            <span class="select-highlight"></span>
-                            <span class="select-bar"></span>
-                            <label class="select-label">Selecciona un servicio</label>
-                        </div>
+                        <!-- <div class="select__options__budget">
+                            <div class="label__options__budget">
+                                Selecciona
+                            </div>
+                            <div class="list__options__budget">
+                                <span class="options__budget__option">
+                                    <input id="option__budget__one"type="radio" value="200" checked name="option__budget" class="option__budget__input">
+                                    <label for="option__budget__one">menos de $200k</label>
+                                </span>
+                                <span class="options__budget__option">
+                                    <input id="option__budget__two"type="radio" value="200-500" name="option__budget" class="option__budget__input">
+                                    <label for="option__budget__two">$200-500k</label>
+                                </span>
+                                <span class="options__budget__option">
+                                    <input id="option__budget__three"type="radio" value="500" name="option__budget" class="option__budget__input">
+                                    <label for="option__budget__three">más de $500k</label>
+                                </span>
+                                <span class="options__budget__option">
+                                    <input id="option__budget__four"type="radio" value="otro" name="option__budget" class="option__budget__input">
+                                    <label for="option__budget__four">Otro</label>
+                                </span>
+                            </div>
+                        </div> -->
                     </div>
-
-                    <!-- <p class="question__budget">¿Tienes un presupuesto?</p> -->
-
-                    <!-- <div class="select__options__budget">
-                        <div class="label__options__budget">
-                            Selecciona
-                        </div>
-                        <div class="list__options__budget">
-                            <span class="options__budget__option">
-                                <input id="option__budget__one"type="radio" value="200" checked name="option__budget" class="option__budget__input">
-                                <label for="option__budget__one">menos de $200k</label>
-                            </span>
-                            <span class="options__budget__option">
-                                <input id="option__budget__two"type="radio" value="200-500" name="option__budget" class="option__budget__input">
-                                <label for="option__budget__two">$200-500k</label>
-                            </span>
-                            <span class="options__budget__option">
-                                <input id="option__budget__three"type="radio" value="500" name="option__budget" class="option__budget__input">
-                                <label for="option__budget__three">más de $500k</label>
-                            </span>
-                            <span class="options__budget__option">
-                                <input id="option__budget__four"type="radio" value="otro" name="option__budget" class="option__budget__input">
-                                <label for="option__budget__four">Otro</label>
-                            </span>
-                        </div>
-                    </div> -->
-                </div>
-                <div class="contact__form__right">
-                    <img src="assets/img/icons/contacto_form.svg" alt="contact us">
-                    <p class="blue__color">Cuéntanos un poco más sobre tu proyecto.</p>
-                    <textarea class="form__text__description" name="description" id="" cols="30" rows="15" placeholder="Escribe tu mensaje aquí"></textarea>
-                </div>
-                <div class="contact__form__large">
-                    <div class="wrap__terms__conditions">
-                        <label class="container__check">
-                            Acepto el <a href="privacidad.html">Aviso de privacidad</a> y doy mi permiso para procesar mis datos personales acorde a dicho aviso.
-                            <input type="checkbox" >
-                            <span class="checkmark"></span>
-                          </label>
+                    <div class="contact__form__right">
+                        <img src="assets/img/icons/contacto_form.svg" alt="contact us" class="inline-element show-on-scroll">
+                        <p class="blue__color">Cuéntanos un poco más sobre tu proyecto.</p>
+                        <textarea class="form__text__description" required id="mensaje" name="message" id="" cols="30" rows="15" placeholder="Escribe tu mensaje aquí"></textarea>
                     </div>
+                    <div class="contact__form__large">
+                        <div class="wrap__terms__conditions">
+                            <label class="container__check">
+                                Acepto el <a href="privacidad.html">Aviso de privacidad</a> y doy mi permiso para procesar mis datos personales acorde a dicho aviso.
+                                <input type="checkbox" id="checkbox__input">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
 
 
-                    <div class="g-recaptcha" data-sitekey="6LciUCkbAAAAADh8MBR3cgwSK4rFHg6ixCCHSXan"></div>
+                        <div class="g-recaptcha" data-sitekey="6LciUCkbAAAAADh8MBR3cgwSK4rFHg6ixCCHSXan"></div>
 
-                    <button class="send__form">Envíanos un mensaje </button>
+                        <button class="send__form" type="submit" >Envíanos un mensaje </button>
 
+                    </div>
                 </div>
-
-
-            </div>
+            </form>
         </div>
     </section>
+
+    <div class="modal__contact__send">
+        <div class="inner__contact__send">
+            <button class="close__contact__send">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 20.121 20.121">
+                    <g id="Group_530" data-name="Group 530" transform="translate(1.439 1.061)">
+                      <line id="Line_10" data-name="Line 10" x2="18" y2="18" transform="translate(-0.379 0)" fill="none" stroke="#080316" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                      <line id="Line_11" data-name="Line 11" x1="18" y2="18" transform="translate(-0.379 0)" fill="none" stroke="#080316" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                    </g>
+                  </svg>
+            </button>
+            <svg id="Group_589" class="icon__contact__send" data-name="Group 589" xmlns="http://www.w3.org/2000/svg" width="76" height="66.853" viewBox="0 0 76 66.853">
+                <circle id="Ellipse_68" data-name="Ellipse 68" cx="11.824" cy="11.824" r="11.824" transform="translate(19.452 21.628)" fill="#4af48f"/>
+                <path id="Path_314" data-name="Path 314" d="M253.945,1526.028c0-.016.008-.032.01-.048s0-.012,0-.018,0-.013,0-.02,0-.03,0-.044,0-.027,0-.04v-.016c0-.015,0-.029,0-.043s0-.042-.008-.063v0s0-.009,0-.013-.008-.029-.012-.043-.011-.039-.018-.058l-.011-.027s0-.008,0-.012-.008-.013-.011-.02-.017-.033-.027-.05-.014-.023-.021-.033-.012-.017-.018-.025-.021-.027-.032-.04l-.031-.035-.019-.019-.008-.009s-.009-.005-.013-.009l0,0c-.017-.014-.034-.029-.052-.042s-.033-.021-.051-.031-.039-.023-.06-.033-.037-.015-.055-.022a.624.624,0,0,0-.064-.022c-.021-.005-.042-.009-.064-.013s-.041-.007-.062-.009a.683.683,0,0,0-.076,0c-.014,0-.028,0-.042,0l-50.841,4.2a.714.714,0,0,0-.394,1.263l10.4,8.54,1.683,17.8a.712.712,0,0,0,1.073.87L225.561,1550l11.183,9.182a.722.722,0,0,0,.24.13.714.714,0,0,0,.854-.367l16.054-32.764c.006-.012.009-.025.015-.037s.013-.031.018-.047l.007-.02C253.938,1526.064,253.941,1526.046,253.945,1526.028Zm-33.567,18.651-.008.012a.7.7,0,0,0-.106.149l-5.019,9.691-1.44-15.23,18.353-5.9,15.344-4.932-26.97,16.086A.7.7,0,0,0,220.378,1544.679Zm26.733-17.584L213.189,1538l-8.964-7.36Zm-30.44,27.784,4.424-8.541,3.329,2.733Zm20.281,2.631-10.738-8.817c-.01-.016-.018-.033-.029-.049a.712.712,0,0,0-.321-.239l-3.787-3.11,29.476-17.58Z" transform="translate(-177.964 -1525.16)" fill="#080316"/>
+                <path id="Path_315" data-name="Path 315" d="M173.022,1632.625a10.1,10.1,0,0,1-3.7-.7c-5.651-2.247-8.547-7.3-7.947-13.872a20.912,20.912,0,0,1,1.008-4.7,58.233,58.233,0,0,0-13.759,6.758.739.739,0,1,1-.848-1.21,59.243,59.243,0,0,1,13.085-6.621q1.116-.387,2.193-.694c2.652-6.233,8.217-12.043,16.007-13.59a.739.739,0,1,1,.288,1.45c-6.611,1.313-11.716,6.192-14.421,11.66,7.657-1.737,13.648-.224,17.473,4.464,3.083,3.779,1.982,8.855-.477,12.211A10.888,10.888,0,0,1,173.022,1632.625Zm-8.865-19.78a19.528,19.528,0,0,0-1.312,5.348c-.537,5.87,2.022,10.377,7.021,12.364,4.684,1.862,8.78-.8,10.864-3.641,2.122-2.9,3.107-7.236.524-10.4C176.978,1611.272,170.336,1611.211,164.157,1612.844Z" transform="translate(-147.458 -1565.772)" fill="#080316"/>
+            </svg>
+            <p class="blue__color">MENSAJE ENVIADO</p>
+            <p class="text__contact__send">Gracias por contactarnos, en breve nos comunicaremos contigo.</p>
+
+        </div>
+    </div>
 
 
     <footer class="footer">
@@ -378,7 +396,7 @@
             </div>
             <div class="footer__right">
                 <div class="social__links">
-                    <a href="https://api.whatsapp.com/send/?phone=5215543873695&text=Hola%2C+quiero+m%C3%A1s+informaci%C3%B3n&app_absent=0" target="_blank" class="">
+                    <a class="inline-element show-on-scroll " href="https://api.whatsapp.com/send/?phone=5215543873695&text=Hola%2C+quiero+m%C3%A1s+informaci%C3%B3n&app_absent=0" target="_blank">
                         <svg id="whatsapp" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
                             <g id="Grupo_84" data-name="Grupo 84">
                               <path id="Trazado_39" data-name="Trazado 39" d="M15,0A15,15,0,0,0,2.271,22.94c-.592,2.076-1.663,6-1.674,6.043a.577.577,0,0,0,.726.7l5.946-1.829A15,15,0,1,0,15,0Zm0,28.846A13.812,13.812,0,0,1,7.655,26.74a.577.577,0,0,0-.306-.088.587.587,0,0,0-.17.025l-5.192,1.6c.381-1.392,1.067-3.882,1.464-5.267a.579.579,0,0,0-.07-.474A13.847,13.847,0,1,1,15,28.846Z" fill="#4af48f"/>
@@ -387,7 +405,7 @@
                         </svg>
                         Envíanos un Whats!
                     </a>
-                    <a href="mailto:hola@geekvibes.mx" class="">
+                    <a class="inline-element show-on-scroll " href="mailto:hola@geekvibes.mx" >
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="21.27" viewBox="0 0 30 21.27">
                             <g id="mail" transform="translate(0 -85.333)">
                                 <g id="Group_85" data-name="Group 85" transform="translate(0 85.333)">
@@ -402,7 +420,7 @@
             </div>
             <div class="footer__large">
                 <ul class="list__social__pages">
-                    <li>
+                    <li class="inline-element show-on-scroll ">
                         <a href="https://www.facebook.com/geekvibes/" target="_blank" title="Facebook">
                             <svg id="FB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
                                 <defs>
@@ -417,7 +435,7 @@
                               </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="inline-element show-on-scroll ">
                         <a href="https://www.linkedin.com/company/geekvibes/" target="_blank" title="LinkedIn">
                             <svg id="Group_99" data-name="Group 99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30.654" height="30.143" viewBox="0 0 30.654 30.143">
                                 <defs>
@@ -434,10 +452,9 @@
                                   <path id="Path_128" data-name="Path 128" d="M2588.79,2418.128h-1.073a6.9,6.9,0,0,0-5.109,2.248v-.715a1.1,1.1,0,0,0-1.022-1.022h-5.109a1.05,1.05,0,0,0-1.022.97v19.057a1,1,0,0,0,1.022.92h5.62a1,1,0,0,0,1.022-.92v-11.035a2.884,2.884,0,0,1,2.81-3.014,3.012,3.012,0,0,1,2.146.869,2.683,2.683,0,0,1,.715,2.095v10.984a1.1,1.1,0,0,0,1.022,1.022h5.109a1.1,1.1,0,0,0,1.022-1.022v-13.181A7.1,7.1,0,0,0,2588.79,2418.128Zm6.131,20.385-.051.051h-5.007l-.051-10.984a3.763,3.763,0,0,0-.971-2.81,4.019,4.019,0,0,0-2.861-1.175,3.939,3.939,0,0,0-3.832,4.036v10.933h-5.62v-18.9h5.058l.051.051v3.219l1.38-1.379.051-.051a5.83,5.83,0,0,1,4.7-2.35h1.073a6.1,6.1,0,0,1,6.08,6.233Z" transform="translate(-2565.288 -2409.443)" fill="url(#linear-gradient)"/>
                                 </g>
                               </svg>
-                              
                         </a>
                     </li>
-                    <li>
+                    <li class="inline-element show-on-scroll ">
                         <a href="https://www.instagram.com/geekvibes.mx/" target="blank" title="instagram">
                             <svg id="IG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
                                 <defs>
@@ -461,7 +478,7 @@
                 </div>
             </div>
             
-            <section id="" class="scroll__indicator__up">
+            <section id="" class="inline-element show-on-scroll scroll__indicator__up">
                 <a href="#header" class="anchor__link">
                     <span></span><span></span><span></span>
                 </a>
@@ -469,6 +486,12 @@
             </section>
         </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_UQTlOPCNaIiD612Vp0POz");
+        })();
+    </script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="assets/js/splide.min.js"></script>
     <script src="assets/js/base.js"></script>
