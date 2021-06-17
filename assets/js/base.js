@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
   let slideServices = new Splide('.splide', {
@@ -21,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentSlide = '0' + (current + 1)
     document.querySelector('.current__indicator').innerText = currentSlide
   })
+
+  (function() {
+    emailjs.init("user_UQTlOPCNaIiD612Vp0POz");
+  })()
 
 });
 
