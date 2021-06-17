@@ -1089,8 +1089,7 @@ html {
 
 
 .select__wrap {
-    font-family:
-        'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Nunito', sans-serif;
     position: relative;
     width: 100%;
 }
@@ -1946,9 +1945,21 @@ html {
         margin-bottom: 2rem;
     }
 
-    .slide__services__indicator,
-    .services__grid .splide__arrows {
+    .slide__services__indicator{
         display: none;
+    }
+    .services__grid .splide__arrows{
+        position: absolute;
+        right: 0;
+        top: 0;
+        max-width: 320px;
+        width: 100%;
+    }
+    .services__grid .splide__arrows .splide__arrow--prev{
+        left: 0;
+    }
+    .services__grid .splide__arrows .splide__arrow{
+        right: 0;
     }
 
     .services__grid .slide__services {
