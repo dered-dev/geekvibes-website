@@ -1,7 +1,32 @@
 
+function showslides (current) {
+  console.log(current)
+  let currentSlide = ''
+  if(window.innerWidth >= 960){
+    if(current < 4){
+      currentSlide = '01 / 02'
+    } else {
+      currentSlide = '02 / 02'
+    }
+  }
+  if(window.innerWidth > 640 && window.innerWidth < 960){
+    if(current < 3){
+      currentSlide = '01 / 03'
+    } else if(current >= 3 && current < 5){
+      currentSlide = '02 / 03'
+    } else {
+      currentSlide = '03 / 03'
+    }
+  } else if(window.innerWidth <= 640) {
+    currentSlide = '0' + (current + 1) + '/ 08'
+  }
 
+  document.querySelector('.current__indicator').innerText = currentSlide
+}
+function initMailJS () {
+  emailjs.init("user_UQTlOPCNaIiD612Vp0POz");
+}
 document.addEventListener('DOMContentLoaded', function () {
-
   let slideServices = new Splide('.splide', {
     type: 'slide',
     perPage: 4,
@@ -20,15 +45,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }).mount()
 
   slideServices.on('move', function (current) {
-    let currentSlide = '0' + (current + 1)
-    document.querySelector('.current__indicator').innerText = currentSlide
+    showslides(current)
   })
 
-  (function() {
-    emailjs.init("user_UQTlOPCNaIiD612Vp0POz");
-  })()
+  showslides(1)
+  initMailJS()
 
 });
+
+window.addEventListener('resize', function(){
+  let activeSlide = document.querySelector('.splide__slide.is-active')
+  let idActiveSlide = activeSlide.getAttribute('id').split('-')[1].substring(6)
+  showslides(parseInt(idActiveSlide))
+}, false)
+
 
 var scroll = window.requestAnimationFrame ||
 function (callback) {
