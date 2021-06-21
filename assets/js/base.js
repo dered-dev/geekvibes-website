@@ -1,6 +1,6 @@
 
 function showslides (current) {
-  console.log(current)
+  
   let currentSlide = ''
   if(window.innerWidth >= 960){
     if(current < 4){
@@ -10,12 +10,15 @@ function showslides (current) {
     }
   }
   if(window.innerWidth > 640 && window.innerWidth < 960){
-    if(current < 3){
-      currentSlide = '01 / 03'
-    } else if(current >= 3 && current < 5){
-      currentSlide = '02 / 03'
+    console.log(current)
+    if(current < 2){
+      currentSlide = '01 / 04'
+    } else if(current >= 1 && current < 4){
+      currentSlide = '02 / 04'
+    }else if(current >= 4 && current < 5){
+      currentSlide = '03 / 04'
     } else {
-      currentSlide = '03 / 03'
+      currentSlide = '04 / 04'
     }
   } else if(window.innerWidth <= 640) {
     currentSlide = '0' + (current + 1) + '/ 08'
@@ -36,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     pagination: false,
     breakpoints: {
       960: {
-        perPage: 3,
+        perPage: 2,
       },
       640: {
         perPage: 1,
@@ -197,6 +200,16 @@ if(close__contact__send){
   })
 }
 
+
+function ValidateEmail(mail) 
+{
+ if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+}
 
 
 

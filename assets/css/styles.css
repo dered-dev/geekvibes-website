@@ -595,7 +595,6 @@ html {
     top: 4rem;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
-
 }
 
 .services__grid .card__slide .service__image {
@@ -605,6 +604,8 @@ html {
 
 .services__grid .card__slide .service__title {
     font-size: 1rem;
+    text-transform: uppercase;
+    color: #FF29BF;
 }
 
 .services__grid .card__slide .service__slogan {
@@ -792,7 +793,7 @@ html {
     font-weight: 400;
     padding-left: 1rem;
     padding-right: 1rem;
-    left: -1rem;
+    left: -1.5rem;
     top: 4rem;
     position: absolute;
     line-height: 1.5em;
@@ -800,6 +801,13 @@ html {
     transform: rotate(-90deg);
     z-index: 3;
     text-transform: uppercase;
+    min-width: 100px;
+    text-align: center;
+}
+
+.grid__projects .projects__grid__category.small{
+    min-width: 60px;
+    left: -5px;
 }
 
 .grid__projects .block__name__project {
@@ -1195,7 +1203,7 @@ html {
     visibility: hidden;
     transition: all linear 0.25s;
 }
-.group__input input:valid ~ .check__input{
+.group__input input.text__input:valid ~ .check__input{
     opacity: 1;
     visibility: visible;
 }
@@ -1717,11 +1725,12 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 320px;
+    max-width: 400px;
     font-family: 'Nunito', sans-serif;
     position: relative;
     transition: all linear 0.25s;
     top: 100px;
+    text-align: center;
 }
 .modal__contact__send.open .inner__contact__send{
     top: 0;
@@ -1812,11 +1821,13 @@ html {
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .grid__projects .projects__grid__card {
-        width: 23%;
-        min-width: 23%;
+        width: 48%;
+        min-width: 48%;
+        margin-top: 1rem;
     }
 
     .head__section .coltext__head__section {
@@ -1912,19 +1923,6 @@ html {
         background-color: #FF29BF;
     }
 
-    .grid__projects .block__name__project strong {
-        -webkit-transform: translateY(1rem);
-        transform: translateY(1rem);
-    }
-
-    .grid__projects .projects__grid__card:hover strong {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    .grid__projects .projects__grid__list {
-        opacity: 0;
-    }
 
     .option__budget__input+label {
         border-color: transparent;
@@ -1978,6 +1976,15 @@ html {
     }
 }
 
+@media screen and (min-width: 1025px) {
+    .grid__projects .projects__grid__list {
+        opacity: 0;
+    }
+    .grid__projects .block__name__project strong {
+        -webkit-transform: translateY(1rem);
+        transform: translateY(1rem);
+    }
+}
 @media screen and (min-width: 1200px) {
     .form__contact{
         padding-left: 1rem;
