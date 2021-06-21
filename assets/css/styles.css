@@ -438,8 +438,8 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .services__head .left_services__head {
@@ -1991,5 +1991,9 @@ html {
     }
     .contact__form__large{
         padding-left: 0;
+    }
+    .services__head .inner__small{
+        padding-left: 0;
+        padding-right: 0;
     }
 }
