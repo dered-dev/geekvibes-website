@@ -43,14 +43,11 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     }
   }).mount()
-
   slideServices.on('move', function (current) {
     showslides(current)
   })
-
   showslides(1)
   initMailJS()
-
 });
 
 window.addEventListener('resize', function(){
@@ -78,12 +75,9 @@ function loop() {
 
   scroll(loop)
 }
-
-
 loop()
 
 function isElementInViewport(el) {
-
   if (typeof jQuery === "function" && el instanceof jQuery) {
     el = el[0]
   }
@@ -98,10 +92,6 @@ function isElementInViewport(el) {
   );
 }
 
-
-
-
-
 const links = document.querySelectorAll(".anchor__link");
 for (const link of links) {
   link.addEventListener("click", clickHandler);
@@ -111,12 +101,7 @@ function clickHandler(e) {
   const href = this.getAttribute("href");
   const offsetTop = document.querySelector(href).offsetTop;
   console.log(offsetTop)
-  window.scrollTo({
-    top: offsetTop,
-    left: 0,
-    behavior: "smooth"
-  });
-
+  window.scrollTo({top:offsetTop,left:0,behavior:"smooth"});
 }
 
 
