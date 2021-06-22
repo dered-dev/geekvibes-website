@@ -2181,6 +2181,7 @@ html {
     }
     .container__not__found{
         flex-direction: row;
+        min-height: 50vh;
     }
     .container__not__found .desc__not__found{
         padding-left: 2rem;
