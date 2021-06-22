@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/splide.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 
 <body>
@@ -407,6 +407,7 @@
                                 <span class="select-highlight"></span>
                                 <span class="select-bar"></span>
                                 <label class="select-label">Selecciona un servicio</label>
+                                <span class="error__text">Debes seleccionar un servicio</span>
                             </div>
                         </div>
                         <!-- <p class="question__budget">¿Tienes un presupuesto?</p> -->
@@ -439,15 +440,16 @@
                         <img src="assets/img/icons/contacto_form.svg" alt="contact us"
                             class="inline-element show-on-scroll">
                         <p class="blue__color">Cuéntanos un poco más sobre tu proyecto.</p>
-                        <textarea class="form__text__description" id="mensaje" name="message" id="" cols="30"
-                            rows="10" placeholder="Escribe tu mensaje aquí"></textarea>
+                        <textarea class="form__text__description" id="mensaje" name="message" id="" cols="30" rows="10" placeholder="Escribe tu mensaje aquí"></textarea>
+                        <span class="error__text">Por favor escribe un mensaje</span>
                     </div>
                     <div class="contact__form__large">
                         <div class="wrap__terms__conditions">
                             <label class="container__check">
-                                Acepto el <a href="privacidad.html">Aviso de privacidad</a>
+                                Acepto el <a href="privacidad.html"> Aviso de privacidad </a>
                                 <input type="checkbox" id="checkbox__input">
                                 <span class="checkmark"></span>
+                                <span class="error__text">Debes aceptar el Aviso de Privacidad</span>
                             </label>
                         </div>
                         <div class="g-recaptcha" data-sitekey="6LciUCkbAAAAADh8MBR3cgwSK4rFHg6ixCCHSXan"></div>
@@ -748,7 +750,7 @@
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script type="text/javascript" src="assets/js/splide.min.js"></script>
     <script type="text/javascript" src="assets/js/email.min.js"></script>
-    <script type="text/javascript" src="assets/js/base.js"></script>
+    <script type="text/javascript" src="assets/js/base.min.js"></script>
 
 </body>
 

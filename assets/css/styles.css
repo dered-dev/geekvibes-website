@@ -1044,6 +1044,7 @@ html {
     width: 100%;
 }
 
+
 .select-text {
     position: relative;
     font-family: inherit;
@@ -1091,8 +1092,6 @@ html {
     transition: all 0.2s ease-in-out;
 }
 
-
-
 .select-label {
     color: rgba(0, 0, 0, 0.26);
     font-size: 18px;
@@ -1115,6 +1114,21 @@ html {
     -webkit-transition: 0.2s ease all;
     transition: 0.2s ease all;
     font-size: 14px;
+}
+
+.select-text ~ .error__text {
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+    font-size: 0.75rem;
+    color: #FF29BF;
+    font-weight: 400;
+    opacity: 0;
+    visibility: hidden;
+}
+.select-text.is-invalid ~ .error__text{
+    visibility: visible;
+    opacity: 1;
 }
 
 .select-bar {
@@ -1575,6 +1589,23 @@ html {
 .form__text__description.is-invalid {
     border-color: #FF29BF;
 }
+.form__text__description  ~ .error__text{
+    text-align: left;
+    width: 100%;
+    padding-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #FF29BF;
+    font-weight: 400;
+    opacity: 0;
+    visibility: hidden;
+    padding-left: 1rem;
+    transition: all linear 0.25s;
+}
+.form__text__description.is-invalid ~ .error__text{
+    opacity: 1;
+    visibility: visible;
+    
+}
 
 .contact__form__large {
     width: 100%;
@@ -1591,6 +1622,7 @@ html {
 
 .wrap__terms__conditions a {
     color: #8AB4F8;
+    margin-left: 0.25rem;
 }
 
 .wrap__terms__conditions input[type="checkbox"] {
@@ -1600,7 +1632,23 @@ html {
 
 .wrap__terms__conditions label {
     position: relative;
-    padding-left: 3rem;
+    padding-left: 2.5rem;
+    min-height: 25px;
+    display: flex;
+    align-items: center;
+}
+.wrap__terms__conditions .error__text{
+    text-align: left;
+    width: 100%;
+    padding-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #FF29BF;
+    font-weight: 400;
+    opacity: 0;
+    visibility: hidden;
+    padding-left: 1rem;
+    transition: all linear 0.25s;
+    position: absolute;
 }
 
 .container__check {
@@ -1623,6 +1671,12 @@ html {
     height: 0;
     width: 0;
 }
+.container__check input.is-invalid ~ .error__text{
+    opacity: 1;
+    visibility: visible;
+    left: 1.5rem;
+    bottom: -1rem;
+} 
 
 .container__check .checkmark {
     position: absolute;
