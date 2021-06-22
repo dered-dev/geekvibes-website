@@ -188,6 +188,10 @@ html {
     max-width: 150px;
     max-height: 30px;
 }
+.header .inner__large > a{
+    display: flex;
+    align-items: center;
+}
 
 .select__lang {
     color: #9AA0A6;
