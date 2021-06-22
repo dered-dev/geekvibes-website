@@ -2221,6 +2221,9 @@ html {
         width: 23%;
         min-width: 23%;
     }
+    .grid__projects .projects__grid__card:nth-of-type(4){
+        display: block;
+    }
 
 }
 @media screen and (min-width: 1200px) {
@@ -2241,4 +2244,5 @@ html {
         padding-left: 0;
         padding-right: 0;
     }
+    
 }

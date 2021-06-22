@@ -1,10 +1,7 @@
 
 function showslides (current) {
-  console.log(current)
-  console.log(window.innerWidth)
   let currentSlide = ''
   if(window.innerWidth > 1024){
-    console.log(current)
     if(current < 4){
       currentSlide = '01 / 02'
     } else {
@@ -12,7 +9,6 @@ function showslides (current) {
     }
   }
   if(window.innerWidth > 960 && window.innerWidth <= 1024){
-    console.log(current)
     if(current < 2){
       currentSlide = '01 / 03'
     } else if(current >= 3 && current < 6){
@@ -22,7 +18,6 @@ function showslides (current) {
     } 
   }
   if(window.innerWidth > 640 && window.innerWidth <= 960){
-    console.log(current)
     if(current < 2){
       currentSlide = '01 / 04'
     } else if(current >= 1 && current < 4){
@@ -121,8 +116,7 @@ for (const link of links) {
 function clickHandler(e) {
   e.preventDefault();
   const href = this.getAttribute("href");
-  const offsetTop = document.querySelector(href).offsetTop;
-  console.log(offsetTop)
+  const offsetTop = document.querySelector(href).offsetTop
   window.scrollTo({top:offsetTop,left:0,behavior:"smooth"});
 }
 
