@@ -2188,6 +2188,10 @@ html {
     .container__not__found .title__404{
         max-width: 360px;
     }
+    .grid__projects .projects__grid__card{
+        width: 23%;
+        min-width: 23%;
+    }
 
 }
 @media screen and (min-width: 1200px) {
