@@ -30,33 +30,39 @@ function initMailJS () {
   emailjs.init("user_UQTlOPCNaIiD612Vp0POz");
 }
 document.addEventListener('DOMContentLoaded', function () {
-  let slideServices = new Splide('.splide', {
-    type: 'slide',
-    perPage: 4,
-    lazyLoad: 'nearby',
-    gap: '2em',
-    padding: '2em',
-    pagination: false,
-    breakpoints: {
-      960: {
-        perPage: 2,
-      },
-      640: {
-        perPage: 1,
-      },
-    }
-  }).mount()
-  slideServices.on('move', function (current) {
-    showslides(current)
-  })
-  showslides(1)
-  initMailJS()
+  let slide = document.querySelector('.splide')
+  if(slide) {
+
+    let slideServices = new Splide('.splide', {
+      type: 'slide',
+      perPage: 4,
+      lazyLoad: 'nearby',
+      gap: '2em',
+      padding: '2em',
+      pagination: false,
+      breakpoints: {
+        960: {
+          perPage: 2,
+        },
+        640: {
+          perPage: 1,
+        },
+      }
+    }).mount()
+    slideServices.on('move', function (current) {
+      showslides(current)
+    })
+    showslides(1)
+    initMailJS()
+  }
 });
 
 window.addEventListener('resize', function(){
   let activeSlide = document.querySelector('.splide__slide.is-active')
-  let idActiveSlide = activeSlide.getAttribute('id').split('-')[1].substring(6)
-  showslides(parseInt(idActiveSlide))
+  if(activeSlide){
+    let idActiveSlide = activeSlide.getAttribute('id').split('-')[1].substring(6)
+    showslides(parseInt(idActiveSlide))
+  }
 }, false)
 
 
@@ -142,7 +148,7 @@ let telefono = document.getElementById('telefono')
 let servicio = document.getElementById('servicio')
 let mensaje = document.getElementById('mensaje')
 let checkbox__input = document.getElementById('checkbox__input')
-formContact.addEventListener('submit', function(event){
+formContact && formContact.addEventListener('submit', function(event){
 
   event.preventDefault()
   
