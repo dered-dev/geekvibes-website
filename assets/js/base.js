@@ -1,15 +1,27 @@
 
 function showslides (current) {
-  
+  console.log(current)
+  console.log(window.innerWidth)
   let currentSlide = ''
-  if(window.innerWidth >= 960){
+  if(window.innerWidth > 1024){
+    console.log(current)
     if(current < 4){
       currentSlide = '01 / 02'
     } else {
       currentSlide = '02 / 02'
     }
   }
-  if(window.innerWidth > 640 && window.innerWidth < 960){
+  if(window.innerWidth > 960 && window.innerWidth <= 1024){
+    console.log(current)
+    if(current < 2){
+      currentSlide = '01 / 03'
+    } else if(current >= 3 && current < 6){
+      currentSlide = '02 / 03'
+    } else {
+      currentSlide = '03 / 03'
+    } 
+  }
+  if(window.innerWidth > 640 && window.innerWidth <= 960){
     console.log(current)
     if(current < 2){
       currentSlide = '01 / 04'
@@ -21,9 +33,9 @@ function showslides (current) {
       currentSlide = '04 / 04'
     }
   } else if(window.innerWidth <= 640) {
-    currentSlide = '0' + (current + 1) + '/ 08'
+    currentSlide = '0' + current + '/ 08'
   }
-
+  
   document.querySelector('.current__indicator').innerText = currentSlide
 }
 function initMailJS () {
@@ -41,6 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
       padding: '2em',
       pagination: false,
       breakpoints: {
+        1024: {
+          perPage: 3,
+        },
         960: {
           perPage: 2,
         },

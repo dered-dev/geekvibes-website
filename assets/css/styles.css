@@ -493,7 +493,7 @@ html {
 
 .right_services__head p {
     color: #202124;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 400;
     margin-top: 1.5rem;
     line-height: 1.35em;
@@ -761,7 +761,7 @@ html {
 }
 
 .all__projects--description {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.35em;
 }
 
@@ -1954,6 +1954,10 @@ html {
 @media screen and (min-width: 768px) {
     .right_services__head p{
         margin-top: 3rem;
+        font-size: 1.125rem;
+    }
+    .all__projects--description{
+        font-size: 1.125rem;
     }
     .whatsapp__indicator,
     .scroll__indicator {
@@ -2186,6 +2190,15 @@ html {
 
 }
 
+@media screen and (min-width: 960px) {
+    .grid__projects .projects__grid__card{
+        min-width: 30%;
+        width: 30%;
+    }
+    .grid__projects .projects__grid__card:nth-of-type(4) {
+        display: none;
+    }
+}
 @media screen and (min-width: 1025px) {
     .grid__projects .projects__grid__list {
         opacity: 0;
