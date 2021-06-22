@@ -348,36 +348,44 @@
                         <p class="form__contact__description">¡Estamos listos para trabajar juntos!</p>
                         <div class="form__contact__inputs">
                             <div class="group__input medium">
-                                <input type="text" class="text__input" required name="nombre" id="nombre">
+                                <input type="text" class="text__input" name="nombre" id="nombre">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Nombre</label>
                                 <span class="check__input"></span>
+                                <span class="error__input"></span>
+                                <span class="error__text">Escribe tu nombre</span>
                             </div>
                             <div class="group__input medium">
-                                <input type="text" class="text__input" required name="apellido" id="apellido">
+                                <input type="text" class="text__input" name="apellido" id="apellido">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Apellido</label>
                                 <span class="check__input"></span>
+                                <span class="error__input"></span>
+                                <span class="error__text">Escribe tu apellido</span>
                             </div>
                             <div class="group__input medium">
-                                <input type="text" required name="mail" id="mail">
+                                <input type="text" name="mail" id="mail" class="is-email">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>E-mail</label>
                                 <span class="check__input"></span>
+                                <span class="error__input"></span>
+                                <span class="error__text">Escribe un correo válido</span>
                             </div>
                             <div class="group__input medium">
-                                <input type="text" required name="telefono" id="telefono" pattern="[0-9]+"
-                                    minlength="10" maxlength="12">
+                                <input type="text" name="telefono" id="telefono" pattern="[0-9]+"
+                                    minlength="10" maxlength="10" class="is-phone">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Teléfono</label>
                                 <span class="check__input"></span>
+                                <span class="error__input"></span>
+                                <span class="error__text">Escribe un teléfono válido</span>
                             </div>
                             <div class="select__wrap medium">
-                                <select class="select-text" required name="servicio" id="servicio">
+                                <select class="select-text" name="servicio" id="servicio">
                                     <option value="" disabled selected></option>
                                     <option value="Websites">Websites</option>
                                     <option value="E-commerce">E-commerce</option>
@@ -429,7 +437,7 @@
                         <img src="assets/img/icons/contacto_form.svg" alt="contact us"
                             class="inline-element show-on-scroll">
                         <p class="blue__color">Cuéntanos un poco más sobre tu proyecto.</p>
-                        <textarea class="form__text__description" required id="mensaje" name="message" id="" cols="30"
+                        <textarea class="form__text__description" id="mensaje" name="message" id="" cols="30"
                             rows="10" placeholder="Escribe tu mensaje aquí"></textarea>
                     </div>
                     <div class="contact__form__large">

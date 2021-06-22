@@ -71,9 +71,7 @@ function loop() {
   Array.prototype.forEach.call(elementsToShow, function (element) {
     if (isElementInViewport(element)) {
       element.classList.add('is-visible')
-    } else {
-      element.classList.remove('is-visible')
-    }
+    } 
   });
 
   scroll(loop)
@@ -169,6 +167,10 @@ formContact.addEventListener('submit', function(event){
     servicio.classList.add('is-invalid')
     valid = false
   }
+  if( mensaje.value === "" ){
+    mensaje.classList.add('is-invalid')
+    valid = false
+  }
   if( checkbox__input.checked === false ){
     checkbox__input.classList.add('is-invalid')
     valid = false
@@ -201,15 +203,113 @@ if(close__contact__send){
 }
 
 
-function ValidateEmail(mail) 
-{
- if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value))
-  {
-    return (true)
-  }
-    alert("You have entered an invalid email address!")
-    return (false)
+function validateEmail(inputText) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputText)
 }
 
+emailInput = document.querySelector('.is-email')
+if(emailInput){
+  emailInput.addEventListener('keyup', function(){
+    var email = emailInput.value
+    console.log(validateEmail(email))
+    if(email.length > 0){
+      if(validateEmail(email)) {
+        emailInput.classList.remove('is-invalid')
+      } else {
+        emailInput.classList.add('is-invalid')
+      }
+    } else {
+      emailInput.classList.remove('is-invalid')
+    }
+  })
+  emailInput.addEventListener('keyup', function(){
+    var email = emailInput.value
+    console.log(validateEmail(email))
+    if(email.length > 0){
+      if(validateEmail(email)) {
+        emailInput.classList.remove('is-invalid')
+        emailInput.classList.add('is-valid')
+      } else {
+        emailInput.classList.remove('is-valid')
+        emailInput.classList.add('is-invalid')
+      }
+    } else {
+      emailInput.classList.remove('is-valid')
+    }
+  })
+}
 
+function validatePhone(inputText) {
+  var phoneRe = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/
+  var digits = inputText.replace(/\D/g, "")
+  return phoneRe.test(digits)
+}
+
+phoneInput = document.querySelector('.is-phone')
+if(phoneInput){
+  phoneInput.addEventListener('keyup', function(){
+    var phone = phoneInput.value
+    if(phone.length > 0){
+      if(validatePhone(phone)) {
+        phoneInput.classList.remove('is-invalid')
+        phoneInput.classList.add('is-valid')
+      } else {
+        phoneInput.classList.add('is-invalid')
+        phoneInput.classList.remove('is-valid')
+      }
+    } else {
+      phoneInput.classList.remove('is-invalid')
+    }
+  })
+
+}
+
+function inputChange(event) {
+  if(event.target.value.length > 0){
+    event.target.classList.remove('is-invalid')
+    event.target.classList.add('is-valid')
+  } else {
+    event.target.classList.remove('is-valid')
+    event.target.classList.add('is-invalid')
+  }
+}
+
+var description = document.querySelector('.form__text__description')
+description  && description.addEventListener('change', inputChange )
+description  && description.addEventListener('keyup', inputChange )
+
+
+var inputName = document.querySelector('#nombre')
+inputName  && inputName.addEventListener('change', inputChange )
+inputName  && inputName.addEventListener('keyup', inputChange )
+
+var inputLastName = document.querySelector('#apellido')
+inputLastName  && inputLastName.addEventListener('change', inputChange )
+inputLastName  && inputLastName.addEventListener('keyup', inputChange )
+
+
+var service = document.querySelector('#servicio')
+service  && service.addEventListener('change', function(){
+  console.log(service.value)
+  if(service.value.length > 0){
+    service.classList.remove('is-invalid')
+    service.classList.add('is-valid')
+  } else {
+    service.classList.remove('is-valid')
+    service.classList.add('is-invalid')
+  }
+} )
+
+var termsAndConditions = document.querySelector('#checkbox__input')
+termsAndConditions  && termsAndConditions.addEventListener('change', function(){
+
+  if(termsAndConditions.checked  === true){
+    termsAndConditions.classList.remove('is-invalid')
+    termsAndConditions.classList.add('is-valid')
+  } else {
+    termsAndConditions.classList.remove('is-valid')
+    termsAndConditions.classList.add('is-invalid')
+  }
+
+} )
 

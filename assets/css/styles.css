@@ -460,13 +460,16 @@ html {
     margin-bottom: 0;
     font-weight: 400;
 }
+.services__head .left_services__head h2 br{
+    display: none;
+}
 
 
 .right_services__head p {
     color: #202124;
     font-size: 1.125rem;
     font-weight: 400;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     line-height: 1.35em;
 }
 
@@ -1037,7 +1040,9 @@ html {
     outline: none;
     border-bottom: 1px solid #54F293;
 }
-
+.select-text.is-invalid {
+    border-bottom: 1px solid #FF29BF;
+}
 
 .select__wrap .select-text {
     -moz-appearance: none;
@@ -1077,21 +1082,14 @@ html {
     font-size: 1rem;
 }
 
-
-.select-text:valid {
-    border-bottom: 1px solid #54F293;
-}
-
 .select-text:focus~.select-label,
-.select-text:valid~.select-label {
+.select-text.is-valid ~ .select-label {
     color: #54F293;
     top: -20px;
     -webkit-transition: 0.2s ease all;
     transition: 0.2s ease all;
     font-size: 14px;
 }
-
-
 
 .select-bar {
     position: relative;
@@ -1162,6 +1160,7 @@ html {
 }
 
 
+
 .group__input label {
     color: #fff;
     font-size: 18px;
@@ -1178,17 +1177,37 @@ html {
 }
 
 
-.group__input input:focus~label,
-.group__input input:valid~label {
+
+.group__input input:focus~label {
     top: -20px;
     font-size: 14px;
     color: #54F293;
 }
 
-.group__input input:valid {
-    border-color: #54F293;
+
+.group__input input.is-invalid:focus,
+.group__input input.is-invalid {
+    color: #fff;
+    border-bottom: 1px solid #FF29BF !important;
+}
+.group__input input.is-invalid ~ label{
+    color: #fff;
+    top: -20px;
+}
+.group__input input.is-valid ~ label{
+    top: -20px;
+    color: #54F293;
 }
 
+.group__input input.is-invalid ~ .bar:before, 
+.group__input input.is-invalid ~ .bar:after{
+    background-color: #FF29BF;
+}
+
+.group__input input.is-valid ~ .check__input{
+    opacity: 1;
+    visibility: visible;
+}
 .group__input .check__input{
     position: absolute;
     right: 9px;
@@ -1201,11 +1220,76 @@ html {
     transform: rotate(45deg);
     opacity: 0;
     visibility: hidden;
-    transition: all linear 0.25s;
+    transition: all linear 0.35s;
 }
-.group__input input.text__input:valid ~ .check__input{
+.group__input .error__input{
+    position: absolute;
+    right: 4px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    transition: all linear 0.35s;
+    opacity: 0;
+    visibility: hidden;
+}
+.error__input:hover::before, 
+.error__input:hover::after {
+    background: #FF29BF;
+  }
+  .error__input::before, .error__input::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #FF29BF;
+  }
+  .error__input::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .error__input::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+.group__input input.is-invalid ~ .error__input{
     opacity: 1;
     visibility: visible;
+}
+
+.group__input input ~ .error__text{
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+    font-size: 0.75rem;
+    color: #FF29BF;
+    font-weight: 400;
+    opacity: 0;
+    visibility: hidden;
+}
+.group__input input.is-invalid ~ .error__text {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.group__input input.text__input.is-valid ~ .check__input{
+    opacity: 1;
+    visibility: visible;
+}
+.group__input input.text__input.is-invalid ~ .check__input {
+    opacity: 0;
+    visibility: hidden;
 }
 
 
@@ -1462,6 +1546,9 @@ html {
 .form__text__description:focus {
     border-color: #54F293;
 }
+.form__text__description.is-invalid {
+    border-color: #FF29BF;
+}
 
 .contact__form__large {
     width: 100%;
@@ -1518,6 +1605,7 @@ html {
     height: 25px;
     width: 25px;
     background-color: #fff;
+    border: 2px solid #fff;
     border-radius: 4px;
 }
 
@@ -1527,6 +1615,7 @@ html {
 
 .container__check input:checked~.checkmark {
     background-color: #8AB4F8;
+    border: 2px solid #8AB4F8;
 }
 
 .container__check .checkmark:after {
@@ -1540,14 +1629,18 @@ html {
 }
 
 .container__check .checkmark:after {
-    left: 9px;
-    top: 5px;
+    left: 7px;
+    top: 3px;
     width: 5px;
     height: 10px;
     border: solid white;
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+.container__check input.is-invalid ~ .checkmark {
+    border-color: #FF29BF;
 }
 
 .send__form {
@@ -1559,6 +1652,11 @@ html {
     font-weight: 400;
     background-color: #54F293;
     margin-top: 3rem;
+    transition: all linear 0.25s;
+}
+.send__form:hover{
+    background-color: #0071EB;
+    color: #FFFFFF;
 }
 
 .footer{
@@ -1606,13 +1704,36 @@ html {
     text-decoration: none;
     display: flex;
     align-items: center;
-}
-.footer .social__links a svg{
-    margin-right: 1rem;
+    padding-right: 2rem;
+    transition: all linear 0.35s;
+    text-decoration: none;
 }
 .footer .social__links a:hover {
-    text-decoration: underline;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
+.footer .social__links a:after {
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #4AF48F;
+    border-bottom: 1px solid #4AF48F;
+    position: absolute;
+    right: 0;
+    content: " ";
+    top: 8px;
+    transform: rotate(-45deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+}
+.footer .social__links a:hover:after{
+    opacity: 1;
+}
+.footer .social__links a svg{
+    margin-right: 1.5rem;
+}
+
 .footer .social__links a:last-of-type{
     margin-bottom: 0;
 }
@@ -1755,7 +1876,9 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-
+    .right_services__head p{
+        margin-top: 3rem;
+    }
     .whatsapp__indicator,
     .scroll__indicator {
         display: block;
@@ -1869,6 +1992,9 @@ html {
     .services__head .left_services__head h2,
     .head__section .coltext__head__section h1 {
         font-size: 2.875rem;
+    }
+    .services__head .left_services__head h2 br{
+        display: block;
     }
 
     .head__section .coltext__head__section strong {
