@@ -319,3 +319,13 @@ termsAndConditions  && termsAndConditions.addEventListener('change', function(){
 
 } )
 
+const progressBar = document.getElementById("progress-bar");
+if(progressBar){
+  function setProgressBar() {
+    let scrollDist = document.documentElement.scrollTop || document.body.scrollTop
+    let progressHeught = (scrollDist / (document.body.scrollHeight - document.documentElement.clientHeight)) * 100
+    progressBar.style.height = progressHeught + "%"
+  }
+  window.addEventListener("scroll", setProgressBar)
+}
+
