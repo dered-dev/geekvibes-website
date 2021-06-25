@@ -132,6 +132,14 @@ textarea {
     background-color: #0071EB;
     color: #FFFFFF;
 }
+.btn__geek.btn__green:disabled:hover,
+.btn__geek.btn__green[disabled]:hover,
+.btn__geek.btn__green:disabled,
+.btn__geek.btn__green[disabled]{
+    color: #9AA0A6;
+    background-color: #F9F9F9;
+    pointer-events: none;
+}
 .send__form{
     margin-top: 3rem;
 }

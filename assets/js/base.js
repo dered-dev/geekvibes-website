@@ -135,12 +135,19 @@ const requestContact = (objContact) => {
                 document.querySelector('.modal__contact__send').classList.add('open')
                 // clear form
                 nombre.value = ''
+                nombre.classList.remove('is-valid')
                 apellido.value = ''
+                apellido.classList.remove('is-valid')
                 mail.value = ''
+                mail.classList.remove('is-valid')
                 telefono.value = ''
+                telefono.classList.remove('is-valid')
                 servicio.value = ''
+                servicio.classList.remove('is-valid')
                 mensaje.value = ''
+                mensaje.classList.remove('is-valid')
                 checkbox__input.checked = false
+                checkbox__input.classList.remove('is-valid')
               }
           } else {
               console.log('No se pudo ejecutar')
@@ -160,7 +167,8 @@ let checkbox__input = document.getElementById('checkbox__input')
 formContact && formContact.addEventListener('submit', function(event){
 
   event.preventDefault()
-  
+  let send__form = document.querySelector('.send__form')
+  send__form.setAttribute('disabled', true)
   let valid = true
   if( nombre.value === "" ){
     nombre.classList.add('is-invalid')
@@ -202,9 +210,10 @@ formContact && formContact.addEventListener('submit', function(event){
     formData.append('service__user', servicio.value);
     formData.append('message', mensaje.value);
     formData.append('g-recaptcha-response', recaptcha.value);
-    
+    send__form.removeAttribute('disabled')
     requestContact(formData)
-
+  } else {
+    send__form.removeAttribute('disabled')
   }
 
 })
